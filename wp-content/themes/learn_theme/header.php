@@ -4,5 +4,14 @@
     <meta charset="<?php bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo('name');?></title>
+    <!-- style.css -->
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
+
+    <?php  wp_head(); ?>
 </head>
-<body>
+<body <?php body_class('body-class');?>>
+
+<header class="header-area">
+    <h1><a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a></h1>
+    <h3><?php bloginfo('description');?></h3>
+</header>
