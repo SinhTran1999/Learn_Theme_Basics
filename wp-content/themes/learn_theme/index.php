@@ -16,8 +16,7 @@
 
                     <div class="post-meta">
                         <span class="date"> Posted on: <?php the_date();?> at <?php the_time()?></span>
-                        <span class="category"> Posted in: <?php the_category()?>
-                        </span>
+                        <span class="category"> Posted in: <?php the_category()?></span>
                         <span class="author"><?php the_author()?></span>
                        
                     </div>
