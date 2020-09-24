@@ -37,6 +37,10 @@
 
     <?php dynamic_sidebar("new_sidebar");?> <!-- dynamic_sidebar("new_sidebar") ở đây là sidebar động nó được truyền id là new_sidebar của function my_register_widgets trong file functions.php -->
 </aside>
+
+<div class="pagination">
+    <?php posts_nav_link()?>
+</div>
 <?php get_footer();?>
  
 
