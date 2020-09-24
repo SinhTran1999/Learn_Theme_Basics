@@ -44,7 +44,28 @@
                 'header-menu' =>__('Header Menu'), /*__('Header Menu') có nghĩa là chỉ định tên(hay gọi value) của header-menu (key)  */
                 'footer-menu' =>__('Footer Menu') /*__('Footer Menu')  có nghĩa là chỉ định tên(hay gọi value) của footer-menu (key)*/
             )
-        );
+            );
     }
     add_action('init', 'register_my_menu');
+
+    // register widgets (sidebar), có nghĩa là tạo một Widgets ở Appearance của Dashboard, mặc định ở Appearance không có Widgets khi ta tạo một theme
+    function my_register_widgets(){
+        register_sidebar(
+            array(
+                'id'=>'new_sidebar',
+                'name' => __('New Sidebar'),
+                'description' =>__('A short description of the sidebar')
+            )
+        );
+    // Tạo thêm một Widgets có tên footer Sidebar của Widgets trong Appearance của Dashboard
+        register_sidebar(
+            array(
+                'id'=>'footer_sidebar',
+                'name' => __('footer Sidebar'),
+                'description' =>__('A short description of the sidebar')
+            )
+        );
+    }
+    
+    add_action('widgets_init', 'my_register_widgets');
 ?>

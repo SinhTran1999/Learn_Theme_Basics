@@ -33,7 +33,9 @@
 <!--add sidebar -->
 
 <aside class="sidebar"> 
-    <?php get_sidebar(); ?>
+    <?php //get_sidebar(); ?> <!-- get_sidebar() ở đây là sidebar tĩnh -->
+
+    <?php dynamic_sidebar("new_sidebar");?> <!-- dynamic_sidebar("new_sidebar") ở đây là sidebar động nó được truyền id là new_sidebar của function my_register_widgets trong file functions.php -->
 </aside>
 <?php get_footer();?>
  
