@@ -7,7 +7,8 @@
 
 // action hook exmaple là được sử dụng để thêm các tính năng vào trang Web
     function theme_setup(){
-      add_theme_support('title-tag');/* thêm thẻ tiêu đề trong phần tiêu đề của trang web */
+        add_theme_support('title-tag');/* thêm thẻ tiêu đề trong phần tiêu đề của trang web */
+        add_theme_support('custom-logo');
     }
 
     // trong hàm add_action có tham số 1 là móc hành động, tham số 2 là tên hàm
@@ -34,4 +35,16 @@
     }
 
     add_action('wp_enqueue_scripts','add_theme_scripts');
+
+
+    // register navigation menu, tức là tạo một Menus ở Appearance của Dashboard, mặc định ở Appearance không có menus khi ta tạo một theme
+    function register_my_menu(){
+        register_nav_menus(
+            array(
+                'header-menu' =>__('Header Menu'), /*__('Header Menu') có nghĩa là chỉ định tên(hay gọi value) của header-menu (key)  */
+                'footer-menu' =>__('Footer Menu') /*__('Footer Menu')  có nghĩa là chỉ định tên(hay gọi value) của footer-menu (key)*/
+            )
+        );
+    }
+    add_action('init', 'register_my_menu');
 ?>
