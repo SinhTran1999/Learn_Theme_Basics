@@ -6,9 +6,6 @@
 /* include header file */
 @import url(./assets/css/_header.css);
 
-/* Global css file */
-@import url(./assets/css/_global.css);
-
 /* Grid css file */
 @import url(./assets/css/_grid.css);
 html,body{
@@ -19,7 +16,6 @@ html,body{
 }
 body{
     font: normal 900 1rem var(--font-Rale);
-    background: var(--dark);
 }
 /* Banner Area */
 .main-area .banner-area .banner{
@@ -34,7 +30,7 @@ body{
     width: 100%;
     max-height: 450px;
     padding-top:15%;
-    padding-bottom: 6rem;
+    padding-bottom: 2rem;
     font:normal 800 1.5rem/1rem var(--font-mont);
 }
 .main-area .banner-area .container-fluid{
@@ -43,3 +39,25 @@ body{
 .main-area .banner-area .img-banner{
     background-size: cover;
 }
+
+/* Categories Section */
+.main-area .categories a > span{
+    border: 1px solid var(--light);
+    padding: 10px 20px; 
+    margin-top:30px;
+    display: block;
+    border-radius: 50px;
+    margin-left: 1.5rem;
+    background: var(--light);
+    box-shadow: var(--box-shadow2);
+    color: var(--gray);
+    transition: all .5s ease;
+}
+.main-area .categories a:hover > span,
+.main-area .categories a:focus > span{
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light);
+    box-shadow: none;
+}
+/* End Categories Section */
