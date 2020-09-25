@@ -2,8 +2,15 @@
 
 /* import css file */
 @import url(./assets/css/_variables.css);
+
 /* include header file */
 @import url(./assets/css/_header.css);
+
+/* Global css file */
+@import url(./assets/css/_global.css);
+
+/* Grid css file */
+@import url(./assets/css/_grid.css);
 html,body{
     height: 100%;
     width: 100%;
@@ -12,4 +19,5 @@ html,body{
 }
 body{
     font: normal 900 1rem var(--font-Rale);
+    background: var(--dark);
 }
