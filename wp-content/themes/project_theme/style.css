@@ -61,3 +61,35 @@ body{
     box-shadow: none;
 }
 /* End Categories Section */
+
+/* post area section */
+.main-area .post-area{
+    margin: 0 10%;
+}
+.main-area .post-area .grid{
+    column-count: 2;
+}
+.main-area .post-area .article{
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    width: auto;
+    display: inline-block;
+}
+.main-area article.blog-post{
+    box-shadow: var(--box-shadow3);
+    border: 1px solid var(--border);
+    transition: box-shadow .7s ease;
+}
+.main-area article.blog-post:hover{
+    box-shadow: none;
+}
+.main-area article.blog-post .post-info{
+    padding: 2rem;
+}
+.main-area article.blog-post .post-info .post-title{
+    padding: 1rem 0;
+}
+.main-area article.blog-post .post-info hr{
+    margin-top: 3rem;
+    background: var(--gray);
+}
