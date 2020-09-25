@@ -3,6 +3,7 @@
     padding: 15px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 .container-fluid{
     width: 100%;
@@ -11,30 +12,59 @@
     margin-right: auto;
 }
 
-
-
-@media(max-width: 575px){
+@media(max-width: 575px) {
     header.header-area .navbar-toggler{
-        top:-63px;
+        top:0px;
+        position: absolute;
+        right: 0px;
+    }
+    .container{
+        max-width: 540px;
+    }
+    .main-area .banner-area .img-banner{
+        height: auto;
+    }
+}
+@media(min-width: 576px) and (max-width:767px){
+    .container{
+        max-width: 540px;
+    }
+    .header-area .search .form-inline{
         position: relative;
+        width: 40px;
+        left: 40px;
     }
-    .container{
-        max-width: 540px;
+    .header-area .search .form-inline{
+        position: relative;
+        width: 165px;
+        height: 50px;
+    }   
+    .header-area .navbar-brand{
+        display: none;
     }
+    .header-area .search .btn{
+        position: absolute;
+        right: 0;
+    }
+    
 }
-@media(min-width: 576px){
-    .container{
-        max-width: 540px;
-    }
-}
-@media(min-width: 768px){
+
+
+@media(min-width: 768px) and (max-width:967px){
     .container{
         max-width: 720px;
     }
+    .header-area .navbar-brand{
+        display: none;
+    }
+
 }
-@media(min-width: 992px){
+@media(min-width: 968px) and (max-width:1198px){
     .container{
         max-width: 960px;
+    }
+    .header-area .navbar-brand{
+        display: none;
     }
 }
 @media(min-width: 1200px){

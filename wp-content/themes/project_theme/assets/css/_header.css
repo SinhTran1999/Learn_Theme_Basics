@@ -43,3 +43,10 @@ header.header-area .navbar-toggler{
     background: var(--primary-color);
     border-radius: 0px;
 }
+
+/* responsive toggle menu */
+@media(max-width: 531px){
+    header.header-area .navbar-toggler{
+        display:block !important; 
+    }
+}
